@@ -1,0 +1,25 @@
+{
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.eksisozluk.com/*",
+                "https://gdata.youtube.com/*"
+            ],
+            "js": [
+                "jquery.js",
+                "eksitubator.js"
+            ]
+        }
+    ],
+    "name": "EkşiTube - 59 Saniye Kurtargacı",
+    "icons": {
+        "128": "128x128.png"
+    },
+    "homepage_url": "http://github.com/metude/eksitube",
+    "version": "1.0",
+    "manifest_version": 2,
+    "developer": {
+        "name": "metude"
+    },
+    "description": "59saniye neymiş la? (YouTube varken)"
+}
