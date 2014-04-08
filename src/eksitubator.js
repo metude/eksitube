@@ -31,4 +31,19 @@ $(document).ready(function () {
             }
         }
     });
+   
+   // youtube links opening inline
+$("div.content a.url").click(function(e){
+    
+    var regex = /(\?v=|\&v=|\/\d\/|\/embed\/|\/v\/|\.be\/)([a-zA-Z0-9\-\_]+)/;
+    var youtubeurl = $(this).attr('href');
+    var regexyoutubeurl = youtubeurl.match(regex);
+    if (regexyoutubeurl) {
+        e.preventDefault();
+        $(this).append("<p><iframe width=\"420\" height=\"315\" src=\"http://www.youtube.com/embed/"+regexyoutubeurl[2]+"\" frameborder=\"0\" allowfullscreen></iframe></p>");
+    }
+});
+
+$("#topic-research-menu ul").append('<li><a href="https://www.youtube.com/results?search_query=' + keyword +'"><span style="vertical-align: middle;display: inline-block;min-width: 16px;min-height: 16px;"><img src="https://youtube.com/favicon.ico"/></span> youtube</a></li>');
+
 });
